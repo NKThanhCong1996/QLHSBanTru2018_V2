@@ -8,13 +8,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DataConnect;
 using DataConnect.DAO.HungTD;
 
 namespace QLHSBanTru2018_Demo_V1.HungTD.Form.Dish
 {
     public partial class frmDishDetail : DevExpress.XtraEditors.XtraForm
     {
+        public frmDishDetail()
+        {
+            InitializeComponent();
+        }
+
         public int iFuntion = 0;
         public DataConnect.Dish dish;
         public void setFunction(int function)
@@ -28,10 +32,6 @@ namespace QLHSBanTru2018_Demo_V1.HungTD.Form.Dish
         public void setTitle(string title)
         {
             this.Text = title;
-        }
-        public frmDishDetail()
-        {
-            InitializeComponent();
         }
 
         private void frmDishDetail_Load(object sender, EventArgs e)
@@ -54,12 +54,7 @@ namespace QLHSBanTru2018_Demo_V1.HungTD.Form.Dish
         }
         private void FillGridControls(int ingredientID)
         {
-            gcLeft.DataSource = new IngredientTypeDAO().ListAllActive();
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            tabInformation.SelectedTabPage = tabPage2;
+            gcLeft.DataSource = new IngredientDAO().ListAllActive(ingredientID);
         }
 
         private void cbbIngredientType_SelectedIndexChanged(object sender, EventArgs e)
@@ -73,6 +68,45 @@ namespace QLHSBanTru2018_Demo_V1.HungTD.Form.Dish
 
             }
 
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            tabInformation.SelectedTabPage = tabPage1;
+            btnNext.Enabled = true;
+            btnPrevious.Enabled = false;
+            btnFinish.Enabled = false;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            tabInformation.SelectedTabPage = tabPage2;
+
+            tabInformation.SelectedTabPage = tabPage2;
+            btnPrevious.Enabled = true;
+            btnFinish.Enabled = true;
+            btnNext.Enabled = false;
+        }
+
+        private void btnFinish_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void repositoryItemButtonEdit3_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frmQuantityInput frmQI = new frmQuantityInput();
+            var rowHandle = gridView1.FocusedRowHandle;
+            try
+            {
+                frmQI.setIngredient(Convert.ToInt32(gridView1.GetRowCellValue(rowHandle, "IngredientID").ToString()));
+            }
+            catch
+            {
+
+            }
+            frmQI.setTitle("Nhập Số Lượng");
+            frmQI.ShowDialog();
         }
     }
 }
