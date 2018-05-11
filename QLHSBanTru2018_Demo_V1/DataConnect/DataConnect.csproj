@@ -75,6 +75,7 @@
     <Compile Include="DAO\HungTD\SemesterDAO.cs" />
     <Compile Include="DAO\HungTD\TopicDAO.cs" />
     <Compile Include="DAO\HungTD\TopicTypeDAO.cs" />
+    <Compile Include="DAO\ThanhCongTC\ChiTieuThucPham\OderDetailDAO.cs" />
     <Compile Include="DAO\ThanhCongTC\ChiTieuThucPham\OrderDAOcs.cs" />
     <Compile Include="DAO\ThanhCongTC\ChiTieuThucPham\TCIngredientRequestDAO.cs" />
     <Compile Include="DAO\ThanhCongTC\ChiTieuThucPham\TCIngredientRequestDetailDAO.cs" />
