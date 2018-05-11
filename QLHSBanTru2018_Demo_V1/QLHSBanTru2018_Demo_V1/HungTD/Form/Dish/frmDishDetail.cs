@@ -92,5 +92,21 @@ namespace QLHSBanTru2018_Demo_V1.HungTD.Form.Dish
         {
             this.Close();
         }
+
+        private void repositoryItemButtonEdit3_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frmQuantityInput frmQI = new frmQuantityInput();
+            var rowHandle = gridView1.FocusedRowHandle;
+            try
+            {
+                frmQI.setIngredient(Convert.ToInt32(gridView1.GetRowCellValue(rowHandle, "IngredientID").ToString()));
+            }
+            catch
+            {
+
+            }
+            frmQI.setTitle("Nhập Số Lượng");
+            frmQI.ShowDialog();
+        }
     }
 }

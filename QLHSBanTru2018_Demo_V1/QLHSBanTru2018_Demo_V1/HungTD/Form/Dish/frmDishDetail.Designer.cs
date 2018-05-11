@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDishDetail));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.btnPrevious = new DevExpress.XtraEditors.SimpleButton();
-            this.btnFinish = new DevExpress.XtraEditors.SimpleButton();
             this.tabInformation = new DevExpress.XtraTab.XtraTabControl();
             this.tabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
@@ -41,15 +38,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLeftName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colChangeQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gcLeft = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -76,7 +73,10 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnFinish = new DevExpress.XtraEditors.SimpleButton();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPrevious = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.Root1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -85,7 +85,6 @@
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabInformation)).BeginInit();
             this.tabInformation.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -121,6 +120,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
@@ -143,38 +143,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(641, 388);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.Root1});
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(641, 388);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.Enabled = false;
-            this.btnPrevious.Location = new System.Drawing.Point(322, 344);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(95, 22);
-            this.btnPrevious.StyleController = this.layoutControl1;
-            this.btnPrevious.TabIndex = 7;
-            this.btnPrevious.Text = "Trờ Về";
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
-            // 
-            // btnFinish
-            // 
-            this.btnFinish.Enabled = false;
-            this.btnFinish.Location = new System.Drawing.Point(521, 344);
-            this.btnFinish.Name = "btnFinish";
-            this.btnFinish.Size = new System.Drawing.Size(98, 22);
-            this.btnFinish.StyleController = this.layoutControl1;
-            this.btnFinish.TabIndex = 5;
-            this.btnFinish.Text = "Hoàn Tất";
-            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
             // tabInformation
             // 
@@ -223,9 +191,9 @@
             // 
             this.cbbIngredientType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbIngredientType.FormattingEnabled = true;
-            this.cbbIngredientType.Location = new System.Drawing.Point(109, 12);
+            this.cbbIngredientType.Location = new System.Drawing.Point(108, 12);
             this.cbbIngredientType.Name = "cbbIngredientType";
-            this.cbbIngredientType.Size = new System.Drawing.Size(127, 21);
+            this.cbbIngredientType.Size = new System.Drawing.Size(128, 21);
             this.cbbIngredientType.TabIndex = 6;
             this.cbbIngredientType.SelectedIndexChanged += new System.EventHandler(this.cbbIngredientType_SelectedIndexChanged);
             // 
@@ -254,64 +222,64 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4});
+            this.colLeftName,
+            this.colQuantity,
+            this.colChangeQuantity,
+            this.colDelete});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn1
+            // colLeftName
             // 
-            this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridColumn1.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn1.Caption = "Tên Nguyên Liệu";
-            this.gridColumn1.FieldName = "Name";
-            this.gridColumn1.MaxWidth = 150;
-            this.gridColumn1.MinWidth = 100;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 100;
+            this.colLeftName.AppearanceCell.Options.UseTextOptions = true;
+            this.colLeftName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.colLeftName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLeftName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLeftName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLeftName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLeftName.Caption = "Tên Nguyên Liệu";
+            this.colLeftName.FieldName = "Name";
+            this.colLeftName.MaxWidth = 150;
+            this.colLeftName.MinWidth = 100;
+            this.colLeftName.Name = "colLeftName";
+            this.colLeftName.Visible = true;
+            this.colLeftName.VisibleIndex = 0;
+            this.colLeftName.Width = 100;
             // 
-            // gridColumn2
+            // colQuantity
             // 
-            this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn2.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn2.Caption = "Lượng/Khẩu Phần";
-            this.gridColumn2.FieldName = "QuantityOfUnit";
-            this.gridColumn2.MaxWidth = 100;
-            this.gridColumn2.MinWidth = 100;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 100;
+            this.colQuantity.AppearanceCell.Options.UseTextOptions = true;
+            this.colQuantity.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colQuantity.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colQuantity.AppearanceHeader.Options.UseTextOptions = true;
+            this.colQuantity.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colQuantity.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colQuantity.Caption = "Lượng/Khẩu Phần";
+            this.colQuantity.FieldName = "QuantityOfUnit";
+            this.colQuantity.MaxWidth = 100;
+            this.colQuantity.MinWidth = 100;
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.Visible = true;
+            this.colQuantity.VisibleIndex = 1;
+            this.colQuantity.Width = 100;
             // 
-            // gridColumn3
+            // colChangeQuantity
             // 
-            this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn3.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn3.ColumnEdit = this.repositoryItemButtonEdit1;
-            this.gridColumn3.MaxWidth = 40;
-            this.gridColumn3.MinWidth = 40;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 40;
+            this.colChangeQuantity.AppearanceCell.Options.UseTextOptions = true;
+            this.colChangeQuantity.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colChangeQuantity.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colChangeQuantity.AppearanceHeader.Options.UseTextOptions = true;
+            this.colChangeQuantity.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colChangeQuantity.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colChangeQuantity.ColumnEdit = this.repositoryItemButtonEdit1;
+            this.colChangeQuantity.MaxWidth = 40;
+            this.colChangeQuantity.MinWidth = 40;
+            this.colChangeQuantity.Name = "colChangeQuantity";
+            this.colChangeQuantity.Visible = true;
+            this.colChangeQuantity.VisibleIndex = 2;
+            this.colChangeQuantity.Width = 40;
             // 
             // repositoryItemButtonEdit1
             // 
@@ -321,15 +289,15 @@
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // gridColumn4
+            // colDelete
             // 
-            this.gridColumn4.ColumnEdit = this.repositoryItemButtonEdit2;
-            this.gridColumn4.MaxWidth = 40;
-            this.gridColumn4.MinWidth = 40;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 40;
+            this.colDelete.ColumnEdit = this.repositoryItemButtonEdit2;
+            this.colDelete.MaxWidth = 40;
+            this.colDelete.MinWidth = 40;
+            this.colDelete.Name = "colDelete";
+            this.colDelete.Visible = true;
+            this.colDelete.VisibleIndex = 3;
+            this.colDelete.Width = 40;
             // 
             // repositoryItemButtonEdit2
             // 
@@ -354,7 +322,7 @@
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn5,
+            this.colName,
             this.gridColumn6});
             this.gridView2.GridControl = this.gcLeft;
             this.gridView2.Name = "gridView2";
@@ -365,13 +333,13 @@
             this.gridView2.OptionsView.ShowColumnHeaders = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn5
+            // colName
             // 
-            this.gridColumn5.FieldName = "Name";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 0;
-            this.gridColumn5.Width = 157;
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 0;
+            this.colName.Width = 157;
             // 
             // gridColumn6
             // 
@@ -390,6 +358,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
             this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             this.repositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryItemButtonEdit3.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryItemButtonEdit3_ButtonClick);
             // 
             // layoutControlGroup3
             // 
@@ -467,42 +436,42 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(176, 71);
+            this.comboBox2.Location = new System.Drawing.Point(175, 71);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(318, 21);
+            this.comboBox2.Size = new System.Drawing.Size(319, 21);
             this.comboBox2.TabIndex = 6;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(176, 46);
+            this.comboBox1.Location = new System.Drawing.Point(175, 46);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(318, 21);
+            this.comboBox1.Size = new System.Drawing.Size(319, 21);
             this.comboBox1.TabIndex = 5;
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(176, 22);
+            this.textEdit1.Location = new System.Drawing.Point(175, 22);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(318, 20);
+            this.textEdit1.Size = new System.Drawing.Size(319, 20);
             this.textEdit1.StyleController = this.layoutControl3;
             this.textEdit1.TabIndex = 4;
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(176, 96);
+            this.textEdit2.Location = new System.Drawing.Point(175, 96);
             this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(318, 20);
+            this.textEdit2.Size = new System.Drawing.Size(319, 20);
             this.textEdit2.StyleController = this.layoutControl3;
             this.textEdit2.TabIndex = 7;
             // 
             // chkStatus
             // 
             this.chkStatus.EditValue = true;
-            this.chkStatus.Location = new System.Drawing.Point(176, 120);
+            this.chkStatus.Location = new System.Drawing.Point(175, 120);
             this.chkStatus.Name = "chkStatus";
             this.chkStatus.Properties.Caption = "Kích Hoạt";
-            this.chkStatus.Size = new System.Drawing.Size(318, 19);
+            this.chkStatus.Size = new System.Drawing.Size(319, 19);
             this.chkStatus.StyleController = this.layoutControl3;
             this.chkStatus.TabIndex = 8;
             // 
@@ -624,6 +593,17 @@
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
+            // btnFinish
+            // 
+            this.btnFinish.Enabled = false;
+            this.btnFinish.Location = new System.Drawing.Point(521, 344);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(98, 22);
+            this.btnFinish.StyleController = this.layoutControl1;
+            this.btnFinish.TabIndex = 5;
+            this.btnFinish.Text = "Hoàn Tất";
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            // 
             // btnNext
             // 
             this.btnNext.Location = new System.Drawing.Point(421, 344);
@@ -633,6 +613,27 @@
             this.btnNext.TabIndex = 6;
             this.btnNext.Text = "Tiếp Tục";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Enabled = false;
+            this.btnPrevious.Location = new System.Drawing.Point(322, 344);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(95, 22);
+            this.btnPrevious.StyleController = this.layoutControl1;
+            this.btnPrevious.TabIndex = 7;
+            this.btnPrevious.Text = "Trờ Về";
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.Root1});
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(641, 388);
+            this.layoutControlGroup1.TextVisible = false;
             // 
             // Root1
             // 
@@ -722,10 +723,11 @@
             this.ClientSize = new System.Drawing.Size(641, 388);
             this.Controls.Add(this.layoutControl1);
             this.Name = "frmDishDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmDishDetail";
+            this.Load += new System.EventHandler(this.frmDishDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabInformation)).EndInit();
             this.tabInformation.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -761,6 +763,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
@@ -783,15 +786,15 @@
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn colLeftName;
+        private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn colChangeQuantity;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn colDelete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2;
         private DevExpress.XtraGrid.GridControl gcLeft;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit3;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
