@@ -554,6 +554,9 @@ F:\CPIT\CPIT2018\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1
 F:\CPIT\CPIT2018\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\obj\Debug\QLHSBanTru2018_Demo_V1.csproj.CopyComplete
 F:\CPIT\CPIT2018\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\obj\Debug\QLHSBanTru2018_Demo_V1.exe
 F:\CPIT\CPIT2018\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\obj\Debug\QLHSBanTru2018_Demo_V1.pdb
+<<<<<<< HEAD
+F:\CPIT\CPIT2018\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\obj\Debug\QLHSBanTru2018_Demo_V1.HungTD.Form.Dish.frmQuantityInput.resources
+=======
 F:\DuAn\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\bin\Debug\QLHSBanTru2018_Demo_V1.exe.config
 F:\DuAn\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\bin\Debug\QLHSBanTru2018_Demo_V1.exe
 F:\DuAn\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\bin\Debug\QLHSBanTru2018_Demo_V1.pdb
@@ -831,3 +834,4 @@ F:\DuAn\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\obj
 F:\DuAn\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\obj\Debug\QLHSBanTru2018_Demo_V1.csproj.CoreCompileInputs.cache
 F:\DuAn\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\obj\Debug\QLHSBanTru2018_Demo_V1.exe
 F:\DuAn\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\obj\Debug\QLHSBanTru2018_Demo_V1.pdb
+>>>>>>> ef9631df56176b1170b9ed0c6015ad18a1258398

@@ -189,6 +189,12 @@
     <Compile Include="HungTD\Form\Dish\frmDishType.Designer.cs">
       <DependentUpon>frmDishType.cs</DependentUpon>
     </Compile>
+    <Compile Include="HungTD\Form\Dish\frmQuantityInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HungTD\Form\Dish\frmQuantityInput.Designer.cs">
+      <DependentUpon>frmQuantityInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="HungTD\Form\Employee\frmEmployeeDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -578,6 +584,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HungTD\Form\Dish\frmDishType.resx">
       <DependentUpon>frmDishType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HungTD\Form\Dish\frmQuantityInput.resx">
+      <DependentUpon>frmQuantityInput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HungTD\Form\Employee\frmEmployeeDetail.resx">
       <DependentUpon>frmEmployeeDetail.cs</DependentUpon>
