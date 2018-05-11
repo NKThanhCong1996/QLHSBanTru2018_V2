@@ -835,7 +835,5 @@ F:\DuAn\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\obj
 F:\DuAn\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\obj\Debug\QLHSBanTru2018_Demo_V1.exe
 F:\DuAn\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\obj\Debug\QLHSBanTru2018_Demo_V1.pdb
 >>>>>>> ef9631df56176b1170b9ed0c6015ad18a1258398
-<<<<<<< HEAD
 F:\DuAn\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\QLHSBanTru2018_Demo_V1\obj\Debug\QLHSBanTru2018_Demo_V1.HungTD.Form.Dish.frmQuantityInput.resources
-=======
 >>>>>>> 6b52de15ec5eb51ee824b7b6178a8a037de08b31
