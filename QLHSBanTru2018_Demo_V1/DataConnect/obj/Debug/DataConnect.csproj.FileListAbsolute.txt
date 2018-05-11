@@ -5,3 +5,10 @@ F:\DuAn\cpit\QLBanTru2018\QLHSBanTru2018_Demo_V1\DataConnect\bin\Debug\DataConne
 F:\DuAn\cpit\QLBanTru2018\QLHSBanTru2018_Demo_V1\DataConnect\bin\Debug\DataConnect.pdb
 F:\DuAn\cpit\QLBanTru2018\QLHSBanTru2018_Demo_V1\DataConnect\obj\Debug\DataConnect.exe
 F:\DuAn\cpit\QLBanTru2018\QLHSBanTru2018_Demo_V1\DataConnect\obj\Debug\DataConnect.pdb
+E:\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\DataConnect\bin\Debug\DataConnect.exe.config
+E:\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\DataConnect\bin\Debug\DataConnect.exe
+E:\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\DataConnect\bin\Debug\DataConnect.pdb
+E:\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\DataConnect\obj\Debug\DataConnect.csprojResolveAssemblyReference.cache
+E:\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\DataConnect\obj\Debug\DataConnect.csproj.CoreCompileInputs.cache
+E:\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\DataConnect\obj\Debug\DataConnect.exe
+E:\cpit\QLHSBanTru2018_V2\QLHSBanTru2018_Demo_V1\DataConnect\obj\Debug\DataConnect.pdb
